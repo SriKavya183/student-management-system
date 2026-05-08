@@ -91,6 +91,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
+    # Set CORS_ALLOWED_ORIGINS env var in Render to your Netlify URL, e.g.:
+    # https://your-site.netlify.app,http://localhost:5173
     _cors_origins = os.environ.get(
         'CORS_ALLOWED_ORIGINS',
         'http://localhost:5173,http://127.0.0.1:5173'
