@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import sqlite3; conn = sqlite3.connect\\('students.db'\\); cursor = conn.cursor\\(\\); cursor.execute\\(\\\\\"SELECT name FROM sqlite_master WHERE type='table'\\\\\"\\); print\\('Tables:', cursor.fetchall\\(\\)\\); cursor.execute\\('PRAGMA table_info\\(students\\)'\\); print\\('Schema:', cursor.fetchall\\(\\)\\); cursor.execute\\('SELECT * FROM students LIMIT 3'\\); print\\('Sample:', cursor.fetchall\\(\\)\\); conn.close\\(\\)\")",
+      "Bash(Test-Path \"C:\\\\Users\\\\Divya\\\\Documents\\\\project\\\\backend\\\\venv\")",
+      "Bash(Test-Path \"C:\\\\Users\\\\Divya\\\\Documents\\\\project\\\\frontend\\\\node_modules\")",
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:8000/api/students/stats/\" -Method GET | ConvertTo-Json)"
+    ]
+  }
+}
